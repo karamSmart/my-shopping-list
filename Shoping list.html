@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة المشتريات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginSection">
+        <h2>تسجيل الدخول</h2>
+        <input type="text" id="username" placeholder="اسم المستخدم">
+        <input type="password" id="password" placeholder="كلمة السر">
+        <button onclick="login()">دخول</button>
+    </div>
+
+    <div id="mainSection" style="display: none;">
+        <h1>قائمة المشتريات</h1>
+        <button onclick="createNewList()">فتح قائمة جديدة</button>
+
+        <div id="suggestedItems">
+            <h3>عناصر مقترحة</h3>
+            <button onclick="addItem('خبز')">خبز</button>
+            <button onclick="addItem('حليب')">حليب</button>
+            <button onclick="addItem('بيض')">بيض</button>
+            <button onclick="addItem('فواكه')">فواكه</button>
+            <button onclick="addItem('خضار')">خضار</button>
+        </div>
+
+        <div id="listContainer" class="list">
+            <div class="listHeader">
+                <h3>القائمة الحالية</h3>
+                <span class="collapse-icon" onclick="toggleList()">-</span>
+            </div>
+            <ul id="shoppingList"></ul>
+        </div>
+
+        <input type="text" id="newItem" placeholder="أضف عنصر جديد">
+        <button onclick="addItem()">إضافة</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
